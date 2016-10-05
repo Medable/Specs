@@ -12,7 +12,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/Medable/ResearchKit.git', :branch => 'Medable_1.3.1', :tag => s.version.to_s }
   s.module_name  = 'ResearchKit'
 
-  s.public_header_files = `./scripts/find_headers.rb --public --private`.split("\n")
+  #commenting this out for now. This makes all headers be public.
+  #s.public_header_files = `./scripts/find_headers.rb --public --private`.split("\n")
+
   s.source_files = 'ResearchKit/**/*.{h,m}'
   s.resources    = 'ResearchKit/**/*.{fsh,vsh}', 'ResearchKit/Animations/**/*.m4v', 'ResearchKit/Artwork.xcassets', 'ResearchKit/Localized/*.lproj'
   s.platform     = :ios, '8.0'
